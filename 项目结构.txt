@@ -1,0 +1,42 @@
+telco_churn_project/
+│
+├── main.py                          # 主程序入口
+├── config.py                        # 配置参数
+│
+├── data/                            # 数据目录
+│   └── WA_Fn-UseC_-Telco-Customer-Churn.csv
+│
+├── src/                             # 源代码目录
+│   ├── __init__.py
+│   ├── data_processing/             # 数据处理模块
+│   │   ├── __init__.py
+│   │   ├── data_loader.py           # 数据加载
+│   │   ├── data_cleaner.py          # 数据清洗
+│   │   └── eda.py                   # 探索性分析
+│   │
+│   ├── feature_engineering/         # 特征工程模块
+│   │   ├── __init__.py
+│   │   ├── basic_features.py        # 基础特征
+│   │   ├── advanced_features.py     # 高级特征
+│   │   └── feature_selection.py     # 特征选择
+│   │
+│   ├── modeling/                    # 建模模块
+│   │   ├── __init__.py
+│   │   ├── baseline_models.py       # 基准模型
+│   │   ├── model_tuning.py          # 模型调优
+│   │   ├── ensemble.py              # 集成学习
+│   │   └── evaluation.py            # 模型评估
+│   │
+│   └── visualization/               # 可视化模块
+│       ├── __init__.py
+│       ├── eda_plots.py             # EDA图表
+│       └── model_plots.py           # 模型图表
+│
+├── notebooks/                       # Jupyter notebooks（用于探索）
+│   ├── 01_eda.ipynb
+│   ├── 02_feature_engineering.ipynb
+│   └── 03_modeling.ipynb
+│
+├── models/                          # 保存训练好的模型
+├── reports/                         # 生成的报告和图表
+└── requirements.txt                 # 依赖包列表
