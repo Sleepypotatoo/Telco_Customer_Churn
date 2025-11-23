@@ -146,3 +146,55 @@
 2025-11-21 15:34:49,409 - src.data_processing.eda - INFO - 探索性数据分析完成
 2025-11-21 15:34:49,409 - __main__ - ERROR - 分析流程出错: 'TelcoChurnAnalysis' object has no attribute 'generate_visualizations'
 2025-11-21 15:34:49,410 - __main__ - ERROR - 主程序运行出错: 'TelcoChurnAnalysis' object has no attribute 'generate_visualizations'
+2025-11-23 19:58:42,312 - __main__ - INFO - 确保目录存在: models
+2025-11-23 19:58:42,313 - __main__ - INFO - 确保目录存在: reports
+2025-11-23 19:58:42,314 - __main__ - INFO - 确保目录存在: reports/plots
+2025-11-23 19:58:42,315 - __main__ - INFO - 确保目录存在: reports/tables
+2025-11-23 19:58:42,315 - __main__ - INFO - 开始电信客户流失分析流程
+2025-11-23 19:58:42,316 - __main__ - INFO - 步骤1: 数据加载
+2025-11-23 19:58:42,316 - __main__ - INFO - 从 data/WA_Fn-UseC_-Telco-Customer-Churn.csv 加载数据
+2025-11-23 19:58:42,317 - src.data_processing.data_loader - INFO - 正在加载数据文件: data\WA_Fn-UseC_-Telco-Customer-Churn.csv
+2025-11-23 19:58:42,381 - src.data_processing.data_loader - INFO - 成功加载数据，形状: (7043, 21)
+2025-11-23 19:58:42,382 - __main__ - INFO - 数据形状: (7043, 21)
+2025-11-23 19:58:42,383 - __main__ - INFO - 数据列: ['customerID', 'gender', 'SeniorCitizen', 'Partner', 'Dependents', 'tenure', 'PhoneService', 'MultipleLines', 'InternetService', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV', 'StreamingMovies', 'Contract', 'PaperlessBilling', 'PaymentMethod', 'MonthlyCharges', 'TotalCharges', 'Churn']
+2025-11-23 19:58:42,414 - __main__ - INFO - 数据前5行:
+   customerID  gender  SeniorCitizen  ... MonthlyCharges TotalCharges  Churn
+0  7590-VHVEG  Female              0  ...          29.85        29.85     No
+1  5575-GNVDE    Male              0  ...          56.95       1889.5     No
+2  3668-QPYBK    Male              0  ...          53.85       108.15    Yes
+3  7795-CFOCW    Male              0  ...          42.30      1840.75     No
+4  9237-HQITU  Female              0  ...          70.70       151.65    Yes
+
+[5 rows x 21 columns]
+2025-11-23 19:58:42,415 - __main__ - INFO - 步骤2: 数据清洗
+2025-11-23 19:58:42,415 - src.data_processing.data_cleaner - INFO - 开始数据清洗过程
+2025-11-23 19:58:42,419 - src.data_processing.data_cleaner - INFO - 处理TotalCharges列
+2025-11-23 19:58:42,428 - src.data_processing.data_cleaner - INFO - TotalCharges转换: 11个值无法转换，设为NaN
+2025-11-23 19:58:42,428 - src.data_processing.data_cleaner - INFO - 处理缺失值
+2025-11-23 19:58:42,448 - src.data_processing.data_cleaner - INFO - 发现 1 列有缺失值
+2025-11-23 19:58:42,452 - src.data_processing.data_cleaner - INFO - 填充了 11 个TotalCharges缺失值
+2025-11-23 19:58:42,480 - src.data_processing.data_cleaner - INFO - 转换数据类型
+2025-11-23 19:58:42,508 - src.data_processing.data_cleaner - INFO - 检查并移除重复行
+2025-11-23 19:58:42,518 - src.data_processing.data_cleaner - INFO - 未发现重复行
+2025-11-23 19:58:42,520 - src.data_processing.data_cleaner - INFO - 跳过异常值处理（配置中未启用）
+2025-11-23 19:58:42,521 - src.data_processing.data_cleaner - INFO - 数据清洗完成: (7043, 21) -> (7043, 21)
+2025-11-23 19:58:42,627 - __main__ - INFO - 清洗后的数据已保存到: data/cleaned_telco_churn.csv
+2025-11-23 19:58:42,628 - __main__ - INFO - 步骤3: 探索性数据分析
+2025-11-23 19:58:42,629 - src.data_processing.eda - INFO - 开始探索性数据分析
+2025-11-23 19:58:42,636 - src.data_processing.eda - INFO - 数据形状: (7043, 21)
+2025-11-23 19:58:42,637 - src.data_processing.eda - INFO - 内存使用: 0.72 MB
+2025-11-23 19:58:42,654 - src.data_processing.eda - INFO - 分析 4 个数值变量
+2025-11-23 19:58:42,676 - src.data_processing.eda - INFO - 分析 17 个分类变量
+2025-11-23 19:58:42,684 - src.data_processing.eda - INFO - 未发现缺失值
+2025-11-23 19:58:42,689 - src.data_processing.eda - INFO - 发现 2 对高相关性特征
+2025-11-23 19:58:42,692 - src.data_processing.eda - INFO - 流失率: 26.54%
+2025-11-23 19:58:42,692 - src.data_processing.eda - INFO - 探索性数据分析完成
+2025-11-23 19:58:42,693 - __main__ - INFO - 生成可视化图表
+2025-11-23 19:58:44,772 - src.visualization.eda_plots - INFO - 目标变量分布图已保存: reports/plots/target_distribution.png
+2025-11-23 19:59:26,737 - src.visualization.eda_plots - INFO - 数值变量分布图已保存: reports/plots/numerical_distributions.png
+2025-11-23 19:59:42,205 - src.visualization.eda_plots - INFO - 分类变量分布图已保存: reports/plots/categorical_distributions.png
+2025-11-23 19:59:51,334 - src.visualization.eda_plots - INFO - 相关性热力图已保存: reports/plots/correlation_heatmap.png
+2025-11-23 19:59:55,242 - __main__ - INFO - 可视化图表已生成并保存到 reports/plots/ 目录
+2025-11-23 19:59:55,243 - __main__ - INFO - 保存EDA报告
+2025-11-23 19:59:55,249 - __main__ - INFO - EDA报告已保存到 reports/tables/ 目录
+2025-11-23 19:59:55,249 - __main__ - INFO - 分析流程完成

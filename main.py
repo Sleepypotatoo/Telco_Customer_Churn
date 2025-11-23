@@ -12,7 +12,7 @@ from config import get_config
 from src.data_processing.data_loader import DataLoader
 from src.data_processing.data_cleaner import DataCleaner
 from src.data_processing.eda import EDA
-#from src.visualization.eda_plots import EDAPlots
+from src.visualization.eda_plots import EDAPlots
 
 # 设置日志
 logging.basicConfig(
@@ -142,27 +142,27 @@ class TelcoChurnAnalysis:
         # 保存EDA报告
         self.save_eda_report(eda_report)
     
-    # def generate_visualizations(self, data: pd.DataFrame, eda_report: dict):
-    #     """
-    #     生成可视化图表
-    #     Args:data: 数据
-    #     eda_report: EDA报告
-    #     """
-    #     logger.info("生成可视化图表")
+    def generate_visualizations(self, data: pd.DataFrame, eda_report: dict):
+        """
+        生成可视化图表
+        Args:data: 数据
+        eda_report: EDA报告
+        """
+        logger.info("生成可视化图表")
         
-    #     try:
-    #         plotter = EDAPlots()
+        try:
+            plotter = EDAPlots()
             
-    #         # 生成各种图表
-    #         plotter.plot_target_distribution(data, save_path='reports/plots/target_distribution.png')
-    #         plotter.plot_numerical_distributions(data, save_path='reports/plots/numerical_distributions.png')
-    #         plotter.plot_categorical_distributions(data, save_path='reports/plots/categorical_distributions.png')
-    #         plotter.plot_correlation_heatmap(data, save_path='reports/plots/correlation_heatmap.png')
+            # 生成各种图表
+            plotter.plot_target_distribution(data, save_path='reports/plots/target_distribution.png')
+            plotter.plot_numerical_distributions(data, save_path='reports/plots/numerical_distributions.png')
+            plotter.plot_categorical_distributions(data, save_path='reports/plots/categorical_distributions.png')
+            plotter.plot_correlation_heatmap(data, save_path='reports/plots/correlation_heatmap.png')
             
-    #         logger.info("可视化图表已生成并保存到 reports/plots/ 目录")
+            logger.info("可视化图表已生成并保存到 reports/plots/ 目录")
             
-    #     except Exception as e:
-    #         logger.warning(f"生成可视化图表时出错: {e}")
+        except Exception as e:
+            logger.warning(f"生成可视化图表时出错: {e}")
     
     def save_eda_report(self, eda_report: dict):
         """
