@@ -76,12 +76,15 @@ def create_value_and_service(df: pd.DataFrame) -> pd.DataFrame:
 
 
 # ---------- 一键入口 ----------
+# 先只做目标编码（不碰其他分类列）
+# 再做手工特征（contract_numeric、num_services 等）
+# 最后统一 one-hot 剩余所有分类字段
 def create_basic_features(df: pd.DataFrame) -> pd.DataFrame:
     logging.info("[基础特征] 开始基础特征工程")
     df = encode_target(df)
+    df = create_value_and_service(df)
     df = bin_numerical(df)
     df = onehot_categorical(df)
-    df = create_value_and_service(df)
     logging.info(f"[基础特征] 完成，当前列数：{df.shape[1]}")
     return df
 

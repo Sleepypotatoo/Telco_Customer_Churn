@@ -15,6 +15,7 @@ from src.feature_engineering.advanced_features import create_advanced_features
 from src.feature_engineering.feature_selection import select_correlation
 from src.reporting.quality_report import quality_report
 from src.reporting.numerical_report import numerical_report
+from src.reporting.feature_documentation import generate_feature_documentation, save_feature_info_json
 
 # ---------- 路径加入 ----------
 sys.path.append(str(Path(__file__).parent / 'src'))
@@ -86,25 +87,42 @@ def run_feature_engineering(df: pd.DataFrame) -> pd.DataFrame:
 
     return df_adv
 
+def generate_feature_documentation_report(engineered_data: pd.DataFrame):
+    """生成特征文档"""
+    logging.info("生成特征文档说明")
+    
+    try:
+        # 生成Markdown格式的特征文档
+        generate_feature_documentation(engineered_data, "reports/feature_documentation.md")
+        
+        # 生成JSON格式的特征信息
+        from src.reporting.feature_documentation import analyze_features, save_feature_info_json
+        feature_info = analyze_features(engineered_data)
+        save_feature_info_json(feature_info, "reports/feature_info.json")
+        
+        logging.info("特征文档生成完成")
+        
+    except Exception as e:
+        logging.error(f"生成特征文档失败: {e}")
+
 
 # ---------- 主流程 ----------
 def main():
     init_dirs()
     logging.info("=" * 60)
-    logging.info("电信客户流失分析（纯函数版）开始")
+    logging.info("电信客户流失分析开始")
     logging.info("=" * 60)
 
     # 1. 加载
     df_raw = load_data()
-
     # 2. 清洗
     df_clean = run_clean(df_raw)
-
     # 3. 可视化
     run_eda(df_clean)
-
     # 4. 特征工程
-    _ = run_feature_engineering(df_clean)
+    df_engineered = run_feature_engineering(df_clean)
+    # 5. 生成特征文档
+    generate_feature_documentation_report(df_engineered)
 
     logging.info("=" * 60)
     logging.info("全部完成！查看：")
@@ -112,10 +130,12 @@ def main():
     logging.info("- 图表：reports/plots/")
     logging.info("- 清洗数据：data/cleaned.csv")
     logging.info("- 特征数据：data/engineered.csv")
+    logging.info("- 特征文档：reports/feature_documentation.md")
     logging.info("=" * 60)
 
     quality_report(df_clean)          # 清洗后数据
     numerical_report(df_clean) 
+    
 
 
 if __name__ == '__main__':

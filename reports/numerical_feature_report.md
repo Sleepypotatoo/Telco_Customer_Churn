@@ -1,4 +1,4 @@
-# 数值特征分析报告
+# 数值特征报告
 
 样本：(7043, 21)
 
@@ -13,6 +13,8 @@
 ![SeniorCitizen](plots\dist_SeniorCitizen.png) ![tenure](plots\dist_tenure.png) ![MonthlyCharges](plots\dist_MonthlyCharges.png) ![TotalCharges](plots\dist_TotalCharges.png) 
 
 ![箱型图](plots\num_box.png)
+
+![联合图](plots\tenure_vs_monthly.png)
 
 ![相关性](plots\num_corr.png)
 

@@ -1,0 +1,360 @@
+{
+  "basic_info": {
+    "total_features": 35,
+    "total_samples": 7043,
+    "numerical_features": 8,
+    "categorical_features": 0
+  },
+  "features": {
+    "SeniorCitizen": {
+      "dtype": "int64",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 2,
+      "min": "0",
+      "max": "1",
+      "mean": 0.1621468124378816,
+      "std": 0.3686116056100131
+    },
+    "tenure": {
+      "dtype": "int64",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 73,
+      "min": "0",
+      "max": "72",
+      "mean": 32.37114865824223,
+      "std": 24.55948102309446
+    },
+    "MonthlyCharges": {
+      "dtype": "float64",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 1585,
+      "min": 18.25,
+      "max": 118.75,
+      "mean": 64.76169246059918,
+      "std": 30.090047097678493
+    },
+    "TotalCharges": {
+      "dtype": "float64",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 6531,
+      "min": 0.0,
+      "max": 8684.8,
+      "mean": 2279.7343035638223,
+      "std": 2266.7944696890213
+    },
+    "customer_value": {
+      "dtype": "float64",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 6051,
+      "min": 0.0,
+      "max": 8550.0,
+      "mean": 2279.5813502768706,
+      "std": 2264.729446524392
+    },
+    "Contract_One year": {
+      "dtype": "bool",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 2,
+      "min": "False",
+      "max": "True",
+      "mean": 0.20914383075394008,
+      "std": 0.4067261693558549
+    },
+    "Contract_Two year": {
+      "dtype": "bool",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 2,
+      "min": "False",
+      "max": "True",
+      "mean": 0.24066448956410622,
+      "std": 0.4275173022982705
+    },
+    "Dependents_Yes": {
+      "dtype": "bool",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 2,
+      "min": "False",
+      "max": "True",
+      "mean": 0.2995882436461735,
+      "std": 0.45811016751001526
+    },
+    "DeviceProtection_No internet service": {
+      "dtype": "bool",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 2,
+      "min": "False",
+      "max": "True",
+      "mean": 0.21666903308249325,
+      "std": 0.4120044475478647
+    },
+    "DeviceProtection_Yes": {
+      "dtype": "bool",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 2,
+      "min": "False",
+      "max": "True",
+      "mean": 0.3438875479199205,
+      "std": 0.4750378329808361
+    },
+    "InternetService_Fiber optic": {
+      "dtype": "bool",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 2,
+      "min": "False",
+      "max": "True",
+      "mean": 0.4395854039471816,
+      "std": 0.496371896418438
+    },
+    "InternetService_No": {
+      "dtype": "bool",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 2,
+      "min": "False",
+      "max": "True",
+      "mean": 0.21666903308249325,
+      "std": 0.4120044475478647
+    },
+    "OnlineBackup_No internet service": {
+      "dtype": "bool",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 2,
+      "min": "False",
+      "max": "True",
+      "mean": 0.21666903308249325,
+      "std": 0.4120044475478647
+    },
+    "OnlineBackup_Yes": {
+      "dtype": "bool",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 2,
+      "min": "False",
+      "max": "True",
+      "mean": 0.3448814425670879,
+      "std": 0.47536335315637873
+    },
+    "OnlineSecurity_No internet service": {
+      "dtype": "bool",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 2,
+      "min": "False",
+      "max": "True",
+      "mean": 0.21666903308249325,
+      "std": 0.4120044475478647
+    },
+    "OnlineSecurity_Yes": {
+      "dtype": "bool",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 2,
+      "min": "False",
+      "max": "True",
+      "mean": 0.2866676132329973,
+      "std": 0.45223702997571114
+    },
+    "PaperlessBilling_Yes": {
+      "dtype": "bool",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 2,
+      "min": "False",
+      "max": "True",
+      "mean": 0.5922192247621753,
+      "std": 0.49145692404940683
+    },
+    "Partner_Yes": {
+      "dtype": "bool",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 2,
+      "min": "False",
+      "max": "True",
+      "mean": 0.4830327985233565,
+      "std": 0.49974751071998735
+    },
+    "PaymentMethod_Credit card (automatic)": {
+      "dtype": "bool",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 2,
+      "min": "False",
+      "max": "True",
+      "mean": 0.2161010932841119,
+      "std": 0.411613248853658
+    },
+    "PaymentMethod_Electronic check": {
+      "dtype": "bool",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 2,
+      "min": "False",
+      "max": "True",
+      "mean": 0.3357944057929859,
+      "std": 0.4723009582433294
+    },
+    "PaymentMethod_Mailed check": {
+      "dtype": "bool",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 2,
+      "min": "False",
+      "max": "True",
+      "mean": 0.22887973874769274,
+      "std": 0.4201414844560208
+    },
+    "StreamingMovies_No internet service": {
+      "dtype": "bool",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 2,
+      "min": "False",
+      "max": "True",
+      "mean": 0.21666903308249325,
+      "std": 0.4120044475478647
+    },
+    "StreamingMovies_Yes": {
+      "dtype": "bool",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 2,
+      "min": "False",
+      "max": "True",
+      "mean": 0.3879028822944768,
+      "std": 0.4873068366824565
+    },
+    "StreamingTV_No internet service": {
+      "dtype": "bool",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 2,
+      "min": "False",
+      "max": "True",
+      "mean": 0.21666903308249325,
+      "std": 0.4120044475478647
+    },
+    "StreamingTV_Yes": {
+      "dtype": "bool",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 2,
+      "min": "False",
+      "max": "True",
+      "mean": 0.38435325855459324,
+      "std": 0.4864765495589314
+    },
+    "TechSupport_No internet service": {
+      "dtype": "bool",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 2,
+      "min": "False",
+      "max": "True",
+      "mean": 0.21666903308249325,
+      "std": 0.4120044475478647
+    },
+    "TechSupport_Yes": {
+      "dtype": "bool",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 2,
+      "min": "False",
+      "max": "True",
+      "mean": 0.2902172369728809,
+      "std": 0.4538947500677709
+    },
+    "contract_numeric_2": {
+      "dtype": "bool",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 2,
+      "min": "False",
+      "max": "True",
+      "mean": 0.20914383075394008,
+      "std": 0.4067261693558549
+    },
+    "contract_numeric_3": {
+      "dtype": "bool",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 2,
+      "min": "False",
+      "max": "True",
+      "mean": 0.24066448956410622,
+      "std": 0.4275173022982705
+    },
+    "monthly_charges_group_高消费": {
+      "dtype": "bool",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 2,
+      "min": "False",
+      "max": "True",
+      "mean": 0.3806616498651143,
+      "std": 0.4855840164988816
+    },
+    "tenure_group_3-5年": {
+      "dtype": "bool",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 2,
+      "min": "False",
+      "max": "True",
+      "mean": 0.22632400965497657,
+      "std": 0.41848096445364075
+    },
+    "tenure_group_5年以上": {
+      "dtype": "bool",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 2,
+      "min": "False",
+      "max": "True",
+      "mean": 0.19977282408064745,
+      "std": 0.3998579051288417
+    },
+    "monthly_tenure_interaction": {
+      "dtype": "float64",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 6051,
+      "min": 0.0,
+      "max": 8550.0,
+      "mean": 2279.5813502768706,
+      "std": 2264.729446524392
+    },
+    "avg_monthly_charge": {
+      "dtype": "float64",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 6586,
+      "min": 0.0,
+      "max": 121.4,
+      "mean": 64.69821757364208,
+      "std": 30.270669542107335
+    },
+    "customer_cluster": {
+      "dtype": "int32",
+      "missing_count": "0",
+      "missing_percent": 0.0,
+      "unique_count": 4,
+      "min": "0",
+      "max": "3",
+      "mean": 1.8740593497089308,
+      "std": 1.1621755008609722
+    }
+  }
+}
